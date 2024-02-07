@@ -17,13 +17,14 @@ const Product = ({product}) => {
         </div>
         {/* buttons */}
         <div className='container-button'>
-          <button>
-            <div className="add-button"><b>+</b></div>
+          <button className="add-button">
+            <div><b>+</b></div>
           </button>
-          <hr className='text-white w-12'></hr>
-          <Link to={`/product/${id}`}>
-            <div><i className='fa fa-eye'></i></div>
-          </Link>
+          <button className="eye-button">
+            <Link to={`/product/${id}`}>
+              <div><i className='fa fa-eye'></i></div>
+            </Link>
+          </button>
         </div>
       </div>
       {/* category and title and price */}
@@ -32,7 +33,7 @@ const Product = ({product}) => {
         <Link to={`/product/${id}`}>
           <h2 className='title-text'>{title}</h2>
         </Link>
-        <div className='price-text'>{price}</div>
+        <div className='price-text'>$ {price}</div>
       </div>
     </div>
   );
