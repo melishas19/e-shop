@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+//import cart context
+import { CartContext } from '../contexts/CartContext';
 
 const Product = ({product}) => {
-  console.log(product);
+  const {addToCart} = useContext(CartContext);
   //destructure product
   const { id, image, category, title, price } = product;
 
@@ -17,7 +19,7 @@ const Product = ({product}) => {
         </div>
         {/* buttons */}
         <div className='container-button'>
-          <button className="add-button">
+          <button onClick={()=>addToCart(product, id)} className="add-button">
             <div><b>+</b></div>
           </button>
           <button className="eye-button">

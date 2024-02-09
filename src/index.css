@@ -141,7 +141,7 @@
   position: fixed;
   top: 0;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  transition: all 300ms;
+  transition: all 1300ms;
   z-index: 20px;
   padding: 0 1rem;
 }
@@ -177,8 +177,120 @@
   align-items: center;
 }
 
+/*----------bottom Sidebar---------*/
+
+
+
 /*--------------------------------------------------*/
 
+/*-----------------------CartItem------------------------------*/
+
+.section-cart{
+  display: flex;
+  column-gap: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgb(196, 196, 196);
+  font-weight: 300;
+  width: 100%;
+}
+
+.container-cart{
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.container-title-and-remove{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title-and-remove{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cart-item-title{
+  font-size: small;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: black;
+  max-width: 240px;
+}
+
+.cart-item-title:hover{
+  text-decoration: underline;
+}
+
+.fa-remove{
+  color: gray;
+  transition: all 300ms;
+  font-size: large;
+  cursor: pointer;
+}
+
+.fa-remove:hover{
+  color: red;
+}
+
+/*--------qty and pricing----------*/
+
+.qty-and-price{
+  display: flex;
+  column-gap: 1rem;
+  height: 36px;
+  font-size: small;
+}
+
+.container-qty{
+  display: flex;
+  flex: 1 1;
+  max-width: 100px;
+  height: 100%;
+  align-items: center;
+  color: black;
+  font-weight: 400;
+  border: 1px solid rgb(189, 189, 189);
+}
+
+.fa-minus, .fa-plus{
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: small;
+}
+
+.amt{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.price{
+  display: flex;
+  flex: 1 1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.final-price{
+  display: flex;
+  flex: 1 1;
+  justify-content: end;
+  align-items: center;
+  font-weight: 600;
+  color: black;
+}
+
+/*--------------------------------------------------*/
 
 /*-----------------------Responsiveness------------------------------*/
 
@@ -212,6 +324,11 @@
 
   .sidebar-shopping{
     padding: 0 35px;
+  }
+
+  .section-cart{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
