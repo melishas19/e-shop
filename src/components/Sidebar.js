@@ -11,7 +11,7 @@ import { CartContext } from '../contexts/CartContext';
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const {cart} = useContext(CartContext);
+  const {cart, clearCart } = useContext(CartContext);
   return <div className={`${isOpen ? 'right-0' : '-right-full'} sidebar-shopping`}>
     <div className='header-sidebar'>
       <div className='shopping-cart-text'>
@@ -26,14 +26,16 @@ const Sidebar = () => {
         return <CartItem item={item} key={item.id} />
       })}
     </div>
-    <div>
-      <div>
+    <div className='container-cart-total'>
+      <div className='cart-total'>
         {/* total */}
-        <div>
+        <div className='total-amt'>
           <span>Total:</span>$ 1000
         </div>
         {/* clear cart icon */}
-        <div><i className='fa fa-trash'></i></div>
+        <div onClick={clearCart}>
+          <i className='fa fa-trash'></i>
+        </div>
       </div>
     </div>
   </div>;

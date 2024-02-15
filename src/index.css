@@ -66,6 +66,10 @@
   transition: all 300ms ease-out;
 }
 
+.logo{
+  width: 40px;
+}
+
 /*------------------Product ADD and View button--------------------------*/
 
 .container-button{
@@ -130,8 +134,52 @@
 
 /*---------------------------Sidebar-------------------------------*/
 
+.header1{
+  background-color: white;
+  padding: 0.5rem 0;
+  box-shadow: 0px 5px 5px rgba(82, 76, 76, 0.555);
+}
+
+.header2{
+  background-color:none; 
+  padding: 1rem 0;
+}
+
 .header{
-  background-color: pink;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  transition: all 150ms;
+}
+
+.header-element{
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 30px;
+}
+
+.inside-header{
+  cursor: pointer;
+  display: flex;
+  position: relative;
+}
+
+.header-amount{
+  background-color: red;
+  position: absolute;
+  left: 1rem;
+  top: 0.7rem;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  color: white;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar-shopping{
@@ -142,7 +190,7 @@
   top: 0;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   transition: all 1300ms;
-  z-index: 20px;
+  z-index: 1;
   padding: 0 1rem;
 }
 
@@ -150,8 +198,8 @@
   font-size: x-large;
   cursor: pointer;
   color: rgb(255, 255, 255);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(235, 66, 0);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
 }
 
 .header-sidebar{
@@ -288,6 +336,39 @@
   align-items: center;
   font-weight: 600;
   color: black;
+}
+
+/*--------delete from cart----------*/
+
+.container-cart-total{
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+.fa-trash{
+  cursor: pointer;
+  background-color: rgb(235, 66, 0);
+  width: 2.5rem;
+  height: 2.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+
+.cart-total{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-amt{
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 /*--------------------------------------------------*/

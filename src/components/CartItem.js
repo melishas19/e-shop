@@ -6,7 +6,7 @@ import { CartContext } from '../contexts/CartContext';
 
 
 const CartItem = ({item}) => {
-  const {removeFromCart}= useContext(CartContext);
+  const {removeFromCart, increaseAmount, decreaseAmount}= useContext(CartContext);
   //destructure item
   const {id, title, image, price, amount} = item;
   return (
@@ -28,9 +28,9 @@ const CartItem = ({item}) => {
         <div className='qty-and-price'>
           {/* qty */}
           <div className='container-qty'>
-            {/* minus icon */} <i className='fa fa-minus'></i>
+            {/* minus icon */} <i onClick={()=>decreaseAmount(id)} className='fa fa-minus'></i>
             {/* amount */} <div className='amt'>{amount}</div>
-            {/* plus icon */} <i className='fa fa-plus'></i>
+            {/* plus icon */} <i onClick={()=>increaseAmount(id)} className='fa fa-plus'></i>
           </div>
           {/* item price */}
           <div className='price'>$ {price}</div>
